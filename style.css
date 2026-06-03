@@ -5,23 +5,63 @@
 }
 
 body {
-    background-color: #0a0a0a;
+    background-color: #000010;
     color: #ffffff;
     font-family: 'Courier New', monospace;
+    overflow-x: hidden;
 }
 
+/* STARS ANIMATION */
+#stars, #stars2, #stars3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#stars {
+    background: transparent url('https://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    animation: animateStars 50s linear infinite;
+}
+
+#stars2 {
+    background: transparent url('https://www.script-tutorials.com/demos/360/images/stars2.png') repeat top center;
+    animation: animateStars 100s linear infinite;
+}
+
+#stars3 {
+    background: transparent url('https://www.script-tutorials.com/demos/360/images/stars3.png') repeat top center;
+    animation: animateStars 150s linear infinite;
+}
+
+@keyframes animateStars {
+    from { background-position: 0 0; }
+    to { background-position: 0 1000px; }
+}
+
+/* NAVIGATION */
 nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    border-bottom: 1px solid #00ff88;
+    background: rgba(0, 0, 20, 0.8);
+    border-bottom: 1px solid #0066ff;
+    z-index: 100;
+    backdrop-filter: blur(10px);
 }
 
 nav p {
-    color: #00ff88;
+    color: #0099ff;
     font-size: 20px;
     font-weight: bold;
+    text-shadow: 0 0 10px #0099ff;
 }
 
 nav ul {
@@ -34,12 +74,15 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00ff88;
+    color: #0099ff;
+    text-shadow: 0 0 10px #0099ff;
 }
 
+/* HERO SECTION */
 #hero {
     height: 100vh;
     display: flex;
@@ -47,28 +90,63 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 #hero h1 {
     font-size: 50px;
-    color: #00ff88;
+    color: #ffffff;
+    text-shadow: 0 0 20px #0099ff;
     margin-bottom: 20px;
+    animation: glowPulse 2s ease-in-out infinite;
 }
 
 #hero p {
     font-size: 20px;
-    color: #888888;
+    color: #0099ff;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #0099ff;
 }
 
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 20px #0099ff; }
+    50% { text-shadow: 0 0 40px #0099ff, 0 0 80px #0066ff; }
+    100% { text-shadow: 0 0 20px #0099ff; }
+}
+
+/* BUTTON */
+.btn {
+    padding: 15px 40px;
+    border: 2px solid #0099ff;
+    color: #0099ff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s;
+    text-shadow: 0 0 10px #0099ff;
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.3);
+}
+
+.btn:hover {
+    background: #0099ff;
+    color: #000010;
+    box-shadow: 0 0 40px rgba(0, 153, 255, 0.8);
+}
+
+/* SECTIONS */
 #about, #projects, #contact {
-    padding: 80px 50px;
-    border-top: 1px solid #222222;
+    padding: 100px 50px;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid #001133;
 }
 
 h2 {
-    color: #00ff88;
+    color: #0099ff;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #0099ff;
 }
 
 p {
@@ -78,10 +156,37 @@ p {
 }
 
 a {
-    color: #00ff88;
+    color: #0099ff;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-shadow: 0 0 10px #0099ff;
+}
+
+/* PROJECT CARD */
+.project-card {
+    background: rgba(0, 30, 60, 0.5);
+    border: 1px solid #0066ff;
+    padding: 30px;
+    margin-top: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+}
+
+.project-card:hover {
+    box-shadow: 0 0 40px rgba(0, 153, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tech {
+    color: #0099ff !important;
+    margin-top: 15px;
+    font-size: 14px !important;
 }
