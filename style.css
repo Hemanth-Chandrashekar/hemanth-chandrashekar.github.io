@@ -95,11 +95,11 @@ nav ul li a:hover {
 }
 
 #hero h1 {
-    font-size: 50px;
+    font-size: 60px;
     color: #ffffff;
-    text-shadow: 0 0 20px #0099ff;
+    text-shadow: 0 0 20px #0b2c43;
     margin-bottom: 20px;
-    animation: glowPulse 2s ease-in-out infinite;
+    animation: glowPulse 4s ease-in-out infinite;
 }
 
 #hero p {
