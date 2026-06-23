@@ -1,0 +1,189 @@
+\documentclass[oneside]{article}
+
+\usepackage{wallpaper}
+\usepackage{geometry}
+\usepackage[
+    unicode=true,
+    bookmarks=true,
+    bookmarksnumbered=false,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    breaklinks=false,
+    pdfborder={0 0 0},
+    backref=false,
+    colorlinks=false
+    ]{hyperref}
+\usepackage{lastpage}
+\usepackage{hyphenat}
+\usepackage{hyphsubst}
+\usepackage{tabularx}
+\usepackage{moresize}
+\usepackage[document]{ragged2e}
+
+\usepackage[scaled]{helvet}
+\usepackage{fontawesome5}
+\usepackage[defaultfam,tabular,oldstyle]{montserrat}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\normalfont}{}{0pt}{}
+
+\renewcommand{\arraystretch}{1.4}
+
+\setlength\fboxrule{0pt}
+\setlength\fboxsep{12pt}
+
+\titlespacing{\section}{0pt}{1.5ex plus .1ex minus .2ex}{1pc}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+\hypersetup{
+    pdftitle={Hemanth Chandrashekar - CV - English},
+    pdfauthor={Hemanth Chandrashekar},
+    pdfsubject={CV}
+}
+
+\geometry{
+    a4paper,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    nohead,
+    nomarginpar
+}
+
+\definecolor{sidebg}{cmyk}{1, 0.02, 0, 0.56}
+\definecolor{mainbg}{cmyk}{0, 0, 0.07, 0.04}
+\definecolor{maintext}{cmyk}{1, 0.02, 0, 0.8}
+\definecolor{sidetext}{cmyk}{0, 0, 0.07, 0.04}
+
+\pagecolor{mainbg}
+
+\begin{document}
+\setlength{\topskip}{0pt}\setlength{\footskip}{0pt}%
+\fcolorbox{red}{sidebg}{%
+    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.40\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{sidetext}
+        {\bfseries\scshape\HUGE Hemanth} \\
+        {\bfseries\scshape\Huge Chandrashekar}
+        \vspace{.3cm} \\
+        Computer Science Student, \\
+        Berlin, Germany
+        \vspace{.3cm}
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Personal info}
+        \section*{\large Personal info}
+        \begin{tabularx}{\textwidth}{cY}
+            \faEnvelope{}   & \href{mailto:hemanthchandrashekar1106@gmail.com}{Email} \\
+            \faMapMarker{}  & Berlin, Germany \\
+        \end{tabularx}
+        \vspace{.3cm} \\
+        \rule{\linewidth}{0.4pt} \\
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Links}
+        \section*{\large Links}
+        \begin{tabular}{cl}
+            \faGithub{}   & \href{https://github.com/Hemanth-Chandrashekar}{/Hemanth-Chandrashekar} \\
+            \faGlobe{}    & \href{https://hemanth-chandrashekar.github.io}{My Portfolio} \\
+        \end{tabular}
+        \vspace{10pt} \\
+        \rule{\linewidth}{0.4pt} \\
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Skills}
+        \section*{\large Skills}
+        \begin{tabularx}{\textwidth}{cY}
+            \faCode{}        & HTML, CSS, JavaScript \\
+            \faPen*{}        & \LaTeX \\
+            \faCogs{}        & Git \& GitHub, Linux shell \\
+        \end{tabularx}
+        \vspace{1pt} \\
+        \rule{\linewidth}{0.4pt}
+        \vfill
+    \end{minipage}
+}
+\hfill
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{maintext}
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Education}
+        \section*{\scshape\Large Education \rule{\linewidth}{0.4pt}}
+        {\large \textbf{BSc Computer Science}} \\
+        {\large \textbf{Gisma University of Applied Sciences}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Berlin \qquad 2026 \textendash{} present} \\[2ex]
+
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Projects}
+        \section*{\scshape\Large Projects \rule{\linewidth}{0.4pt}}
+        {\large \textbf{Portfolio Website}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Personal Project \qquad 2026}
+        \begin{itemize}
+            \setlength{\itemsep}{-3pt}
+            \item Built a personal portfolio website to showcase my skills for a working-student application
+            \item Hosted on GitHub Pages
+            \item Technologies: HTML, CSS, JavaScript, GitHub Pages, \LaTeX
+        \end{itemize}
+
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Personal Profile}
+        \section*{\scshape\Large Personal Profile \rule{\linewidth}{0.4pt}}
+        I am a Computer Science student passionate about learning new technologies, self-development, and cars. I am seeking a working-student position as a front-end web developer where I can apply and grow my skills.
+
+        \vfill%
+        {\hfill\small\fontseries{extralight}\selectfont Page \thepage of \pageref{LastPage}\hfill}
+    \end{minipage}
+}%
+\newpage
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{maintext}
+        \phantomsection
+        \addcontentsline{toc}{section}{More Projects}
+        \section*{\scshape\Large More Projects \rule{\linewidth}{0.4pt}}
+        \begin{justify}
+        \setlength{\parindent}{0pt}
+        {\large \textbf{Linux Shell \& Terminal}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Personal \qquad 2026} \\
+        Learned to use the Linux shell to create, delete and navigate through folders using terminal to manage project files and version control with Git.\\[1ex]
+        Linux Shell, Bash, Git \\
+        \end{justify}
+        \vfill%
+        {\hfill\small\fontseries{extralight}\selectfont Page \thepage of \pageref{LastPage}\hfill}
+    \end{minipage}
+}
+\hfill%
+\fcolorbox{red}{sidebg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.4\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{sidetext}
+        {\bfseries\scshape\HUGE Hemanth} \\
+        {\bfseries\scshape\Huge Chandrashekar}
+        \vspace{.3cm} \\
+        \phantomsection
+        \addcontentsline{toc}{section}{Languages}
+        \section*{\large Languages}
+        \begin{tabular}{cl}
+            \faLanguage{} & English (Fluent) \\
+        \end{tabular}
+        \vspace{.3cm}
+        \\
+        \rule{\linewidth}{0.4pt}
+        \\
+        \phantomsection
+        \addcontentsline{toc}{section}{Hobbies}
+        \section*{\large Hobbies}
+        \begin{tabularx}{\textwidth}{cY}
+            \faCarSide{} & Cars \& Automobile Engineering \\
+            \faLaptop{}  & Web Development \\
+        \end{tabularx}
+        \vspace{.3cm}
+        \\
+        \rule{\linewidth}{0.4pt}
+    \end{minipage}%
+}%
+\end{document}
