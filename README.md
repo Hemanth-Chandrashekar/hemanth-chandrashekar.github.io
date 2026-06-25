@@ -4,7 +4,6 @@
  - `index.html` — This file contains the HTML structure and content  
 - `style.css` — This  contains the code for the CSS styles and visual design elements
 - `cv/` — This folder contains my professional CV created using LaTeX 
-- `assets/` — Contains the images used for the the portfolio website 
 - `README.md` —It is a text document used to introduce and give a brief about the project 
 ## Live Website
 [Visit my portfolio](https://hemanth-chandrashekar.github.io)
